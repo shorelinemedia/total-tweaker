@@ -51,7 +51,7 @@ function scriptTask(){
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask(){
-    watch([files.scss],
+    watch([files.scss, files.js],
         {interval: 1000, usePolling: true}, //Makes docker work
         series(
             parallel(cssTask, scriptTask)

@@ -86,7 +86,7 @@ class SL9_Total_Tweaker {
         wp_add_inline_style( 'wpex-style', $styles );
 
         // Enqueue javascript for lazyload intersector
-        wp_enqueue_script( 'sl9-total-tweaker-lazyload-bg', SL9_TOTAL_TWEAKER_URL . 'assets/js/lazyload-bg.js', [ 'wpex-core' ], SL9_TOTAL_TWEAKER_VERSION );
+        wp_enqueue_script( 'sl9-total-tweaker-lazyload-bg', SL9_TOTAL_TWEAKER_URL . 'assets/js/lazyload-bg.js', [ 'wpex-core' ], SL9_TOTAL_TWEAKER_VERSION, true );
 
     }
 
@@ -104,7 +104,10 @@ class SL9_Total_Tweaker {
         // If we have no css array key or $atts is empty, return false
         if ( empty( $atts ) || ! array_key_exists( 'css', $atts ) ) { return false; }
 
-        return false !== strpos( $atts['css'], 'background-image' );
+        return ( 
+            false !== strpos( $atts['css'], 'background-image' ) || 
+            false !== strpos( $atts['css'], 'url(' )
+        );
     }
 
 }
