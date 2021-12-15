@@ -56,11 +56,6 @@ class SL9_Total_Tweaker {
         return self::PLUGIN_NICE_NAME;
     }
 
-    // Enqueue plugin assets
-    public function enqueue_assets () {
-
-    }
-
     // Change vc_row class for background image lazyloading
     public function vc_row_lazyload_bg_class ( $classes = [], $tag = [], $atts = [] ) {
         // Remove extra spaces in class string 
@@ -71,7 +66,7 @@ class SL9_Total_Tweaker {
         
         // If we have a 'css' key in $atts and it's got 'background-image'
         if ( $this->atts_css_has_bg( $atts ) ) {
-            error_log( print_r( $tag, true ) );
+
             $classes[] = 'sl9-lazyload-bg';
             
         } 
