@@ -1,24 +1,23 @@
-# Total Tweaker
-
-**Contributors:** Shoreline Media \
-**Donate link:** https://shoreline.media
+=== Total Tweaker ===
+Contributors: Shoreline Media
+Donate link: https://shoreline.media
 Tags: 
 Requires at least: 
 Tested up to: 
-**Stable tag:** master
+Stable tag: master
 Requires PHP: 
-**License:** GPLv2 or later \
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin adds performance or other tweaks to the Total Theme without need to edit a theme
 
-## Description
+== Description ==
 
 Here's what it does:
 
 * Adds lazyloading for background images used in WPBakery
 
-## Development
+== Development ==
 
 <strong>README</strong>
 

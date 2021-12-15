@@ -62,16 +62,16 @@ class SL9_Total_Tweaker {
     }
 
     // Change vc_row class for background image lazyloading
-    public function vc_row_lazyload_bg_class ( $classes = [], $settings = [], $atts = [] ) {
+    public function vc_row_lazyload_bg_class ( $classes = [], $tag = [], $atts = [] ) {
         // Remove extra spaces in class string 
         $classes = preg_replace( '/\s+/', ' ', $classes );
 
         // Create array of classes from string
         $classes = explode( ' ', $classes );
         
-        // If we have a 'bg_image' key and it's got a value
-        if ( array_key_exists( 'bg_image', $atts ) && ! empty( $atts['bg_image'] ) ) {
-
+        // If we have a 'css' key in $atts and it's got 'background-image'
+        if ( $this->atts_css_has_bg( $atts ) ) {
+            error_log( print_r( $tag, true ) );
             $classes[] = 'sl9-lazyload-bg';
             
         } 
@@ -94,5 +94,23 @@ class SL9_Total_Tweaker {
         wp_enqueue_script( 'sl9-total-tweaker-lazyload-bg', SL9_TOTAL_TWEAKER_URL . 'assets/js/lazyload-bg.js', [ 'wpex-core' ], SL9_TOTAL_TWEAKER_VERSION );
 
     }
+
+    // Check if a VC element has a 'bg_image'
+    public function vc_element_has_bg ( $tag = '', $atts = [] ) {
+        if ( empty( $tag ) ) return false;
+        return ( 
+            // $tag == 'vc_row' && 
+            array_key_exists( 'bg_image', $atts ) && 
+            ! empty( $atts['bg_image'] ) );
+    }
+
+    // Check an $atts['css'] string for 'background-image'
+    public function atts_css_has_bg ( $atts = [] ) {
+        // If we have no css array key or $atts is empty, return false
+        if ( empty( $atts ) || ! array_key_exists( 'css', $atts ) ) { return false; }
+
+        return false !== strpos( $atts['css'], 'background-image' );
+    }
+
 }
 

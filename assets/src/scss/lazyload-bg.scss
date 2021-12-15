@@ -1,0 +1,7 @@
+@import "vc_helpers";
+
+.sl9-lazyload-bg {
+    background-image: none !important;
+
+    @include lazy-load-elements( ".vc_row" ".vc_section" ".wpb_content_element" );
+}

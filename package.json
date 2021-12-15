@@ -1,0 +1,21 @@
+{
+  "name": "total-tweaker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shorelinemedia/total-tweaker.git",
+  "author": "Shoreline Media",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.5",
+    "sass": "^1.45.0"
+  },
+  "browserslist": "> 1%, last 15 versions, ie > 10",
+  "scripts": {
+    "readme": "vendor/bin/wp2md -i README.txt -o README.md"
+  }
+}

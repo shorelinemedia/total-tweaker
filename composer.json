@@ -1,0 +1,7 @@
+{
+    "name": "shorelinemedia/total-tweaker",
+    "repositories":[],
+    "require-dev": {
+        "wpreadme2markdown/wp2md": "^3.0"
+    }
+}

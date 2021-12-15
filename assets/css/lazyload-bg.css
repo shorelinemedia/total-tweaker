@@ -1,2 +1,3 @@
-.sl9-lazyload-bg,
-.vc_row.sl9-lazyload-bg { background-image: none !important; }
+.sl9-lazyload-bg, .sl9-lazyload-bg.wpb_content_element, .sl9-lazyload-bg.vc_section, .sl9-lazyload-bg.vc_row {
+  background-image: none !important;
+}

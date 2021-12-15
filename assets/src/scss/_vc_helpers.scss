@@ -1,0 +1,6 @@
+// Create css classes for each element
+@mixin lazy-load-elements( $els ) {
+    @each $el in $els {
+        &#{$el} { @extend .sl9-lazyload-bg; }
+    }
+}
