@@ -50,6 +50,7 @@ var sl9LazyLoadBGImages = function() {
 
 };
 
-// document.addEventListener("DOMContentLoaded", sl9LazyLoadBGImages);
-window.wpex.config.$document.ready(sl9LazyLoadBGImages);
+(function($){
+  $(sl9LazyLoadBGImages);
+})(jQuery);
  

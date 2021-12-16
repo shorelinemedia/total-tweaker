@@ -3,7 +3,7 @@
  * Plugin Name:       Shoreline Total Tweaker
  * Plugin URI:        http://shoreline.media
  * Description:       Tweaks to the Total theme
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Shoreline Media Marketing
  * Author URI:        http://shorline.media
  * License:           GPL-2.0+
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define ( 'SL9_TOTAL_TWEAKER_VERSION', '1.0.1' );
+define ( 'SL9_TOTAL_TWEAKER_VERSION', '1.0.2' );
 define ( 'SL9_TOTAL_TWEAKER_PATH', plugin_dir_path( __FILE__ ) );
 define ( 'SL9_TOTAL_TWEAKER_URL', plugin_dir_url( __FILE__ ) );
 
